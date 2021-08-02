@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Employees
+{% endblock %}
+
+ {% block content %}
+    {% for card in card %}
+        <div class="card mb-5" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{card.name}}</li>
+            <li class="list-group-item">{{card.role}}</li>
+            <li class="list-group-item">{{card.phone}}</li>
+            <li class="list-group-item">{{card.date_of_birth}}</li>
+        </ul>
+        </div>
+    {% endfor %}
+{% endblock %}
